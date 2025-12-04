@@ -1,0 +1,15 @@
+{
+  "general": {
+    "improvement_bullets": {
+      "missing_result": "Add a measurable result (e.g., reduced latency by 30%).",
+      "missing_action": "Specify the concrete actions you took—tools, steps, stakeholders.",
+      "unclear": "Rewrite the opening sentence to state the situation concisely."
+    },
+    "practice_prompts": {
+      "improve_result": "Rewrite your answer including a quantifiable result.",
+      "add_action": "Explain step-by-step what *you* did, avoiding team-generalizations.",
+      "clarify": "Provide one-sentence clarification focusing on the outcome."
+    },
+    "model_answer_template": "S: {situation}\nT: {task}\nA: {actions}\nR: {result}\n(Use this as a concise template to mirror.)"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "weights": {
+    "clarity": 40,
+    "structure": 35,
+    "relevance": 25
+  },
+  "clarification_threshold": 45,
+  "score_ranges": {
+    "clarity": {
+      "low": 0,
+      "medium": 20,
+      "high": 35
+    },
+    "structure": {
+      "missing": 0,
+      "partial": 18,
+      "good": 30
+    },
+    "relevance": {
+      "low": 0,
+      "medium": 12,
+      "high": 20
+    }
+  },
+  "diagnostic_templates": {
+    "clarity": {
+      "low": "Response is unclear or verbose; remove filler, use short sentences.",
+      "medium": "Mostly clear; tighten conclusion and avoid ambiguous terms.",
+      "high": "Clear and concise."
+    },
+    "structure": {
+      "missing_result": "STAR missing Result — add measurable outcome.",
+      "missing_action": "STAR missing Action — describe what you did.",
+      "good_star": "STAR present with Situation, Task, Action, Result."
+    },
+    "relevance": {
+      "low": "Answer drifts from the question; focus on the asked problem.",
+      "medium": "Generally relevant but include specific examples.",
+      "high": "Directly addresses the question with relevant details."
+    }
+  }
+}

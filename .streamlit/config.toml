@@ -1,0 +1,26 @@
+# SkillsBridge Streamlit Configuration
+# Professional interview coaching platform theme
+
+[theme]
+# Primary color for interactive elements and highlights
+primaryColor = "#2E5BFF"
+
+# Main app background
+backgroundColor = "#0E1117"
+
+# Secondary background for widgets and sidebar sections
+secondaryBackgroundColor = "#1A1D29"
+
+# Text color throughout the app
+textColor = "#FAFAFA"
+
+# Base font family
+font = "sans serif"
+
+# Client configuration
+[client]
+showErrorDetails = false
+
+# Logger configuration
+[logger]
+level = "info"

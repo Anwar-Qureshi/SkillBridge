@@ -1,0 +1,1604 @@
+[
+  {
+    "id": "q001",
+    "text": "Tell me about a time you faced a conflict on a team and how you resolved it.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q002",
+    "text": "Describe a situation where you had to learn something quickly to complete a task.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q003",
+    "text": "Give an example of when you failed and what you learned from it.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q004",
+    "text": "Tell me about a time you showed leadership.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q005",
+    "text": "Describe a project where you had to manage competing priorities.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q006",
+    "text": "Tell me about a time you received critical feedback and how you responded.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q007",
+    "text": "Describe an instance where you had to persuade others to your viewpoint.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q008",
+    "text": "Tell me about a time you took initiative beyond your responsibilities.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q009",
+    "text": "Describe a time you handled a stressful deadline.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q010",
+    "text": "Tell me about a time you made a decision with incomplete information.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q011",
+    "text": "Describe a situation where you improved a process or reduced waste.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q012",
+    "text": "Tell me about a time you collaborated with someone from a different background.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q013",
+    "text": "How would you handle a sudden production outage in a critical service?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q014",
+    "text": "How would you prioritize bug fixes vs feature requests when resources are limited?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q015",
+    "text": "Explain how you would debug a slow-running query in a database.",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q016",
+    "text": "You have a legacy module with no tests. How do you safely change it?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q017",
+    "text": "How would you design a simple recommendation feature for a campus app?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q018",
+    "text": "You need to onboard a new team member quickly. What's your plan?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q019",
+    "text": "How would you approach scaling an application from 1k to 100k users?",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q020",
+    "text": "Explain how you would estimate the time to complete a project with uncertain requirements.",
+    "tags": [
+      "situational",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q021",
+    "text": "Explain a technical challenge you solved and the trade-offs you considered.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q022",
+    "text": "Describe a project where you optimized performance and the metrics you used.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q023",
+    "text": "Tell me about your most impactful project and why it mattered.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q024",
+    "text": "How do you ensure code quality in your projects?",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q025",
+    "text": "Describe a time you used data to make a decision.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q026",
+    "text": "Explain how you handle ambiguity in project requirements.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q027",
+    "text": "Tell me about a time you automated a repetitive task.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q028",
+    "text": "Describe how you stay current with new technologies.",
+    "tags": [
+      "technical",
+      "competency"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q029",
+    "text": "Tell me about a time you resolved a team conflict and what you learned.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q030",
+    "text": "Describe a project where you had to manage resources under tight constraints.",
+    "tags": [
+      "behavioral",
+      "soft-skills"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q031",
+    "text": "Tell me about a time when you had to work with a difficult team member.",
+    "tags": [
+      "behavioral",
+      "soft-skills",
+      "teamwork"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q032",
+    "text": "Describe a situation where you had to meet a tight deadline.",
+    "tags": [
+      "behavioral",
+      "time-management"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q033",
+    "text": "Tell me about a time you helped a colleague solve a problem.",
+    "tags": [
+      "behavioral",
+      "soft-skills",
+      "collaboration"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q034",
+    "text": "Describe a time when you had to adapt to a significant change at work or school.",
+    "tags": [
+      "behavioral",
+      "adaptability"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q035",
+    "text": "Give an example of when you went above and beyond your duties.",
+    "tags": [
+      "behavioral",
+      "initiative"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q036",
+    "text": "Tell me about a time you disagreed with a decision and how you handled it.",
+    "tags": [
+      "behavioral",
+      "communication"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q037",
+    "text": "Describe a situation where you had to explain a complex technical concept to a non-technical person.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "technical"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q038",
+    "text": "Tell me about a time when you identified and fixed a critical bug.",
+    "tags": [
+      "technical",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q039",
+    "text": "Describe a project where you had to balance technical debt with new features.",
+    "tags": [
+      "technical",
+      "decision-making"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q040",
+    "text": "Tell me about a time you had to make a difficult trade-off decision.",
+    "tags": [
+      "behavioral",
+      "decision-making"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q041",
+    "text": "Describe how you prioritized tasks when everything seemed urgent.",
+    "tags": [
+      "behavioral",
+      "time-management"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q042",
+    "text": "Tell me about a time you had to deliver bad news to stakeholders.",
+    "tags": [
+      "behavioral",
+      "communication"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q043",
+    "text": "Describe a situation where you improved team collaboration or morale.",
+    "tags": [
+      "behavioral",
+      "leadership",
+      "teamwork"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q044",
+    "text": "Tell me about a time you mentored or trained someone.",
+    "tags": [
+      "behavioral",
+      "leadership"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q045",
+    "text": "Describe a time when you had to work with ambiguous requirements.",
+    "tags": [
+      "behavioral",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q046",
+    "text": "Tell me about a time you had to convince your team to try a new approach.",
+    "tags": [
+      "behavioral",
+      "leadership",
+      "innovation"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q047",
+    "text": "Describe a time when you had to recover from a major setback.",
+    "tags": [
+      "behavioral",
+      "resilience"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q048",
+    "text": "Tell me about a time you implemented a creative solution to a problem.",
+    "tags": [
+      "behavioral",
+      "innovation",
+      "problem-solving"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q049",
+    "text": "Describe a situation where you had to handle multiple competing stakeholders.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "stakeholder-management"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q050",
+    "text": "Tell me about a time you had to learn a new technology or tool quickly.",
+    "tags": [
+      "behavioral",
+      "learning",
+      "technical"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q051",
+    "text": "Describe how you handled a situation where you had insufficient resources.",
+    "tags": [
+      "behavioral",
+      "resourcefulness"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q052",
+    "text": "Tell me about a time you had to give constructive feedback to a peer.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "leadership"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q053",
+    "text": "Describe a time when your work was criticized and how you responded.",
+    "tags": [
+      "behavioral",
+      "resilience",
+      "growth"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q054",
+    "text": "Tell me about a time you had to make a decision without all the data you needed.",
+    "tags": [
+      "behavioral",
+      "decision-making"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q055",
+    "text": "Describe a situation where you had to say no to a request from a stakeholder.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "assertiveness"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q056",
+    "text": "Tell me about a time you improved documentation or knowledge sharing in your team.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "process-improvement"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q057",
+    "text": "Describe a time when you had to pivot or change direction on a project.",
+    "tags": [
+      "behavioral",
+      "adaptability"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q058",
+    "text": "Tell me about a time you took ownership of a problem that wasn't your responsibility.",
+    "tags": [
+      "behavioral",
+      "initiative",
+      "ownership"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q059",
+    "text": "Describe a situation where you had to influence without authority.",
+    "tags": [
+      "behavioral",
+      "leadership",
+      "communication"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q060",
+    "text": "Tell me about a time you had to debug a complex issue.",
+    "tags": [
+      "technical",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q061",
+    "text": "How would you approach refactoring a large codebase?",
+    "tags": [
+      "situational",
+      "technical",
+      "architecture"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q062",
+    "text": "Describe how you would handle conflicting feedback from multiple code reviewers.",
+    "tags": [
+      "situational",
+      "communication"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q063",
+    "text": "How would you design a system to handle high traffic during peak hours?",
+    "tags": [
+      "situational",
+      "technical",
+      "system-design"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q064",
+    "text": "What would you do if you discovered a security vulnerability in production?",
+    "tags": [
+      "situational",
+      "security",
+      "critical-thinking"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q065",
+    "text": "How would you handle a situation where a team member is not pulling their weight?",
+    "tags": [
+      "situational",
+      "leadership",
+      "teamwork"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q066",
+    "text": "Describe your approach to learning a completely new tech stack for a project.",
+    "tags": [
+      "situational",
+      "learning",
+      "technical"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q067",
+    "text": "How would you ensure code quality in a fast-paced startup environment?",
+    "tags": [
+      "situational",
+      "technical",
+      "quality"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q068",
+    "text": "What steps would you take if your deployment caused issues in production?",
+    "tags": [
+      "situational",
+      "problem-solving",
+      "devops"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q069",
+    "text": "How would you approach migrating a monolithic application to microservices?",
+    "tags": [
+      "situational",
+      "architecture",
+      "technical"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q070",
+    "text": "Describe how you would implement a feature flag system.",
+    "tags": [
+      "situational",
+      "technical",
+      "devops"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q071",
+    "text": "Tell me about a time you improved the performance of an application.",
+    "tags": [
+      "technical",
+      "optimization",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q072",
+    "text": "Describe a time when you designed and implemented a new feature from scratch.",
+    "tags": [
+      "technical",
+      "development",
+      "ownership"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q073",
+    "text": "Tell me about your experience with testing and test automation.",
+    "tags": [
+      "technical",
+      "testing",
+      "quality"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q074",
+    "text": "Describe a time you had to optimize database queries or schema.",
+    "tags": [
+      "technical",
+      "database",
+      "optimization"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q075",
+    "text": "Tell me about a time you implemented security best practices in your code.",
+    "tags": [
+      "technical",
+      "security",
+      "competency"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q076",
+    "text": "Describe your experience with version control and branching strategies.",
+    "tags": [
+      "technical",
+      "devops",
+      "collaboration"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q077",
+    "text": "Tell me about a time you integrated third-party APIs or services.",
+    "tags": [
+      "technical",
+      "integration",
+      "development"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q078",
+    "text": "Describe how you approach error handling and logging in your applications.",
+    "tags": [
+      "technical",
+      "best-practices",
+      "reliability"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q079",
+    "text": "Tell me about a time you worked with CI/CD pipelines.",
+    "tags": [
+      "technical",
+      "devops",
+      "automation"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q080",
+    "text": "Describe your experience with cloud platforms (AWS, Azure, GCP).",
+    "tags": [
+      "technical",
+      "cloud",
+      "infrastructure"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q081",
+    "text": "Tell me about a time you had to troubleshoot a production incident.",
+    "tags": [
+      "technical",
+      "problem-solving",
+      "reliability"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q082",
+    "text": "Describe a time when you contributed to open source or community projects.",
+    "tags": [
+      "technical",
+      "collaboration",
+      "initiative"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q083",
+    "text": "Tell me about your experience with agile methodologies and sprint planning.",
+    "tags": [
+      "technical",
+      "process",
+      "teamwork"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q084",
+    "text": "Describe a time you had to balance code quality with delivery speed.",
+    "tags": [
+      "technical",
+      "decision-making",
+      "trade-offs"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q085",
+    "text": "Tell me about a time you implemented monitoring or observability in a system.",
+    "tags": [
+      "technical",
+      "devops",
+      "reliability"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q086",
+    "text": "Describe how you've used design patterns to solve a problem.",
+    "tags": [
+      "technical",
+      "architecture",
+      "design"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q087",
+    "text": "Tell me about a time you had to work with legacy code.",
+    "tags": [
+      "technical",
+      "maintenance",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q088",
+    "text": "Describe your experience with containerization (Docker, Kubernetes).",
+    "tags": [
+      "technical",
+      "devops",
+      "infrastructure"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q089",
+    "text": "Tell me about a time you improved the user experience of an application.",
+    "tags": [
+      "technical",
+      "ux",
+      "product"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q090",
+    "text": "Describe a time when you had to reduce technical debt.",
+    "tags": [
+      "technical",
+      "refactoring",
+      "quality"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q091",
+    "text": "Tell me about a time you failed to meet a deadline and how you handled it.",
+    "tags": [
+      "behavioral",
+      "accountability",
+      "time-management"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q092",
+    "text": "Describe a situation where you had to negotiate with stakeholders.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "stakeholder-management"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q093",
+    "text": "Tell me about a time you challenged the status quo or proposed a better way.",
+    "tags": [
+      "behavioral",
+      "innovation",
+      "leadership"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q094",
+    "text": "Describe a time when you had to build something with limited guidance.",
+    "tags": [
+      "behavioral",
+      "initiative",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q095",
+    "text": "Tell me about a time you had to coordinate across multiple teams.",
+    "tags": [
+      "behavioral",
+      "coordination",
+      "communication"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q096",
+    "text": "Describe a situation where you had to maintain composure under pressure.",
+    "tags": [
+      "behavioral",
+      "stress-management",
+      "resilience"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q097",
+    "text": "Tell me about a time you received recognition for your work.",
+    "tags": [
+      "behavioral",
+      "achievement"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q098",
+    "text": "Describe how you handle competing priorities with equal importance.",
+    "tags": [
+      "behavioral",
+      "time-management",
+      "decision-making"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q099",
+    "text": "Tell me about a time you had to present technical information to executives.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "technical"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q100",
+    "text": "Describe a time when you demonstrated accountability for a mistake.",
+    "tags": [
+      "behavioral",
+      "accountability",
+      "integrity"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q101",
+    "text": "Tell me about a time you had to make an unpopular decision.",
+    "tags": [
+      "behavioral",
+      "leadership",
+      "decision-making"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q102",
+    "text": "Describe a situation where you had to deal with scope creep.",
+    "tags": [
+      "behavioral",
+      "project-management",
+      "communication"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q103",
+    "text": "Tell me about a time you improved a team process or workflow.",
+    "tags": [
+      "behavioral",
+      "process-improvement",
+      "initiative"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q104",
+    "text": "Describe a time when you had to learn from a competitor or external source.",
+    "tags": [
+      "behavioral",
+      "learning",
+      "market-awareness"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q105",
+    "text": "Tell me about a time you had to build consensus among disagreeing parties.",
+    "tags": [
+      "behavioral",
+      "communication",
+      "conflict-resolution"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q106",
+    "text": "Describe a situation where you exceeded expectations on a project.",
+    "tags": [
+      "behavioral",
+      "achievement",
+      "excellence"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q107",
+    "text": "Tell me about a time you had to manage dependencies between multiple projects.",
+    "tags": [
+      "behavioral",
+      "project-management",
+      "coordination"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q108",
+    "text": "Describe a time when you had to advocate for technical quality over speed.",
+    "tags": [
+      "behavioral",
+      "technical",
+      "quality"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q109",
+    "text": "Tell me about a time you identified a potential problem before it became critical.",
+    "tags": [
+      "behavioral",
+      "proactive",
+      "problem-solving"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q110",
+    "text": "Describe a situation where you had to work with someone from a different culture.",
+    "tags": [
+      "behavioral",
+      "diversity",
+      "collaboration"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q111",
+    "text": "Tell me about a time you had to defend your technical approach.",
+    "tags": [
+      "behavioral",
+      "technical",
+      "communication"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q112",
+    "text": "Describe a time when you contributed to establishing best practices.",
+    "tags": [
+      "behavioral",
+      "leadership",
+      "standards"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q113",
+    "text": "Tell me about a time you helped resolve a customer escalation.",
+    "tags": [
+      "behavioral",
+      "customer-service",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q114",
+    "text": "Describe a situation where you had to take calculated risks.",
+    "tags": [
+      "behavioral",
+      "risk-management",
+      "decision-making"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q115",
+    "text": "Tell me about a time you simplified a complex system or process.",
+    "tags": [
+      "behavioral",
+      "simplification",
+      "technical"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q116",
+    "text": "Describe a time when you had to collaborate remotely with a distributed team.",
+    "tags": [
+      "behavioral",
+      "remote-work",
+      "collaboration"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q117",
+    "text": "Tell me about a time you had to roll back a deployment or feature.",
+    "tags": [
+      "technical",
+      "incident-management",
+      "decision-making"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q118",
+    "text": "Describe a situation where you improved system reliability or uptime.",
+    "tags": [
+      "technical",
+      "reliability",
+      "devops"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q119",
+    "text": "Tell me about a time you implemented caching or optimization strategies.",
+    "tags": [
+      "technical",
+      "performance",
+      "optimization"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q120",
+    "text": "Describe how you would handle a data breach or security incident.",
+    "tags": [
+      "situational",
+      "security",
+      "crisis-management"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q121",
+    "text": "Tell me about your experience with A/B testing or experimentation.",
+    "tags": [
+      "technical",
+      "data-driven",
+      "product"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q122",
+    "text": "Describe a time when you dealt with technical constraints that limited your solution.",
+    "tags": [
+      "technical",
+      "problem-solving",
+      "trade-offs"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q123",
+    "text": "Tell me about a time you implemented automated testing.",
+    "tags": [
+      "technical",
+      "testing",
+      "automation"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q124",
+    "text": "Describe how you would approach building a real-time notification system.",
+    "tags": [
+      "situational",
+      "system-design",
+      "architecture"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q125",
+    "text": "Tell me about a time you dealt with data inconsistency or corruption.",
+    "tags": [
+      "technical",
+      "data-integrity",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q126",
+    "text": "Describe your approach to code reviews and giving feedback.",
+    "tags": [
+      "behavioral",
+      "collaboration",
+      "quality"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q127",
+    "text": "Tell me about a time you migrated data or systems.",
+    "tags": [
+      "technical",
+      "migration",
+      "planning"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q128",
+    "text": "Describe how you would design an API for a mobile application.",
+    "tags": [
+      "situational",
+      "api-design",
+      "architecture"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q129",
+    "text": "Tell me about a time you dealt with flaky tests or unstable builds.",
+    "tags": [
+      "technical",
+      "testing",
+      "reliability"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q130",
+    "text": "Describe a time when you implemented logging or tracing for debugging.",
+    "tags": [
+      "technical",
+      "observability",
+      "debugging"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q131",
+    "text": "Tell me about a time you advocated for accessibility in your product.",
+    "tags": [
+      "behavioral",
+      "accessibility",
+      "advocacy"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q132",
+    "text": "Describe how you would handle rate limiting in an API.",
+    "tags": [
+      "situational",
+      "api-design",
+      "scalability"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q133",
+    "text": "Tell me about a time you implemented internationalization or localization.",
+    "tags": [
+      "technical",
+      "i18n",
+      "globalization"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q134",
+    "text": "Describe a situation where you had to balance user needs with business requirements.",
+    "tags": [
+      "behavioral",
+      "product-thinking",
+      "trade-offs"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q135",
+    "text": "Tell me about a time you set up infrastructure as code.",
+    "tags": [
+      "technical",
+      "devops",
+      "infrastructure"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q136",
+    "text": "Describe your experience with message queues or event-driven architecture.",
+    "tags": [
+      "technical",
+      "architecture",
+      "distributed-systems"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q137",
+    "text": "Tell me about a time you improved developer productivity or tooling.",
+    "tags": [
+      "technical",
+      "developer-experience",
+      "tooling"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q138",
+    "text": "Describe how you would ensure backward compatibility in an API.",
+    "tags": [
+      "situational",
+      "api-design",
+      "versioning"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q139",
+    "text": "Tell me about a time you implemented search functionality.",
+    "tags": [
+      "technical",
+      "search",
+      "implementation"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q140",
+    "text": "Describe a time when you had to optimize memory usage.",
+    "tags": [
+      "technical",
+      "optimization",
+      "performance"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q141",
+    "text": "Tell me about a time you implemented authentication or authorization.",
+    "tags": [
+      "technical",
+      "security",
+      "implementation"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q142",
+    "text": "Describe how you would approach disaster recovery planning.",
+    "tags": [
+      "situational",
+      "reliability",
+      "planning"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q143",
+    "text": "Tell me about a time you dealt with concurrent programming challenges.",
+    "tags": [
+      "technical",
+      "concurrency",
+      "problem-solving"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q144",
+    "text": "Describe a time when you built a dashboard or analytics tool.",
+    "tags": [
+      "technical",
+      "data-visualization",
+      "analytics"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q145",
+    "text": "Tell me about a time you had to sunset or deprecate a feature.",
+    "tags": [
+      "behavioral",
+      "product-management",
+      "communication"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q146",
+    "text": "Describe how you ensure privacy and data protection in your applications.",
+    "tags": [
+      "technical",
+      "privacy",
+      "compliance"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q147",
+    "text": "Tell me about a time you built or used a design system.",
+    "tags": [
+      "technical",
+      "design-systems",
+      "frontend"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q148",
+    "text": "Describe a situation where you implemented retry logic or circuit breakers.",
+    "tags": [
+      "technical",
+      "resilience",
+      "reliability"
+    ],
+    "difficulty": "easy",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q149",
+    "text": "Tell me about a time you contributed to technical documentation.",
+    "tags": [
+      "behavioral",
+      "documentation",
+      "communication"
+    ],
+    "difficulty": "medium",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  },
+  {
+    "id": "q150",
+    "text": "Describe how you would architect a system for global scale and low latency.",
+    "tags": [
+      "situational",
+      "architecture",
+      "scalability"
+    ],
+    "difficulty": "hard",
+    "model_answer": "S: [Situation]\nT: [Task]\nA: [Action — specific steps you took]\nR: [Result — measurable outcome if possible]\n(Keep concise, quantify result)"
+  }
+]

@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+env/
+venv/
+.venv/
+ENV/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+session_logs.json
+
+# Streamlit
+.streamlit/cache/
+.streamlit/secrets.toml
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Project specific
+*.json.bak
+demo_cases/
