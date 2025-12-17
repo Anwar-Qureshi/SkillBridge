@@ -608,6 +608,6 @@ Give us a star on GitHub! It helps other students discover SkillsBridge.
 
 **Built with Streamlit • Powered by Gemini AI • Made for Students**
 
-*Last Updated: December 2024 • Version 1.0.0*
+*Last Updated: December 2025 • Version 1.0.0*
 
 </div>
