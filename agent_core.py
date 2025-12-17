@@ -17,6 +17,7 @@ import json
 import os
 import random
 import re
+import time
 from typing import Any, Dict, Optional, Tuple
 
 # Paths
@@ -72,35 +73,101 @@ class LLMClient:
     """
 
     def __init__(self) -> None:
+        # Support multiple environment variable names for Gemini/OpenAI keys.
+        # Prefer `GEMINI_API_KEY` (commonly used), then `GOOGLE_API_KEY`, then `OPENAI_API_KEY`.
+        self.gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
         self.google_key = os.getenv("GOOGLE_API_KEY", "").strip()
         self.openai_key = os.getenv("OPENAI_API_KEY", "").strip()
-        self.has_provider = bool(self.google_key or self.openai_key)
+
+        # Whether we have any provider keys at all (may still fail to initialize client).
+        self.has_provider = bool(self.gemini_key or self.google_key or self.openai_key)
         self.model = None
-        
-        # Initialize Gemini if key available
-        if self.google_key:
+        self.llm_provider = None
+
+        # Initialize Google Gemini if either GEMINI_API_KEY or GOOGLE_API_KEY is present
+        if self.gemini_key or self.google_key:
+            key = self.gemini_key or self.google_key
             try:
                 import google.generativeai as genai
-                genai.configure(api_key=self.google_key)
-                self.model = genai.GenerativeModel('gemini-pro')
+                genai.configure(api_key=key)
+                # Use gemini-2.5-flash model (the correct current model name with DOT not hyphen)
+                try:
+                    self.model = genai.GenerativeModel('gemini-2.5-flash')
+                    self.llm_provider = 'google'
+                    print("[OK] LLMClient initialized with Gemini 2.5 Flash model")
+                except Exception as e:
+                    print(f"Warning: gemini-2.5-flash not available ({e}), trying gemini-pro...")
+                    try:
+                        self.model = genai.GenerativeModel('gemini-pro')
+                        self.llm_provider = 'google'
+                        print("[OK] LLMClient initialized with Gemini Pro model (fallback)")
+                    except Exception as e2:
+                        print(f"Warning: gemini-pro not available ({e2}), LLM disabled")
+                        self.model = None
+                        self.has_provider = False
             except Exception as e:
-                print(f"Warning: Failed to initialize Gemini: {e}")
-                self.has_provider = False
+                print(f"Error: Failed to initialize Gemini API client: {e}")
+                # Keep has_provider True only if another key is present (e.g., OPENAI)
+                if not self.openai_key:
+                    self.has_provider = False
+
+        # OpenAI support placeholder: keep key for potential future use
+        elif self.openai_key:
+            # We don't initialize an OpenAI client here, but record presence of key.
+            self.llm_provider = 'openai'
 
     def call(self, prompt: str, max_tokens: int = 512, temperature: float = 0.7) -> Optional[str]:
         if not self.has_provider or not self.model:
+            print(f"[DEBUG] LLM call skipped: has_provider={self.has_provider}, model={self.model is not None}")
             return None
         
-        try:
-            generation_config = {
-                "temperature": temperature,
-                "max_output_tokens": max_tokens,
-            }
-            response = self.model.generate_content(prompt, generation_config=generation_config)
-            return response.text.strip() if response and response.text else None
-        except Exception as e:
-            print(f"LLM call failed: {e}")
-            return None
+        # Retry logic with exponential backoff for quota errors
+        max_retries = 2
+        for attempt in range(max_retries + 1):
+            try:
+                print(f"[DEBUG] Calling Gemini with model: {self.llm_provider}; max_tokens={max_tokens} (attempt {attempt+1})")
+                generation_config = {
+                    "temperature": temperature,
+                    "max_output_tokens": max_tokens,
+                }
+                response = self.model.generate_content(prompt, generation_config=generation_config)
+                result = None
+                if response:
+                    # Prefer response.text when available
+                    if getattr(response, "text", None):
+                        result = response.text.strip()
+                    else:
+                        # Fallback: stitch text from candidates parts
+                        try:
+                            parts_text = []
+                            for cand in getattr(response, "candidates", []) or []:
+                                content = getattr(cand, "content", None)
+                                for p in getattr(content, "parts", []) or []:
+                                    t = getattr(p, "text", None)
+                                    if isinstance(t, str):
+                                        parts_text.append(t)
+                            if parts_text:
+                                result = "\n".join(parts_text).strip()
+                        except Exception as pe:
+                            print(f"[DEBUG] Unable to parse candidates: {pe}")
+                print(f"[DEBUG] Gemini response length: {len(result) if result else 0}")
+                return result
+            except Exception as e:
+                error_str = str(e)
+                # Check if it's a quota error (429)
+                is_quota_error = "429" in error_str or "quota" in error_str.lower()
+                print(f"[ERROR] LLM call failed (attempt {attempt+1}): {e}")
+                
+                if is_quota_error and attempt < max_retries:
+                    # Extract retry delay if available
+                    wait_time = 2 ** attempt  # exponential backoff: 1s, 2s, 4s
+                    print(f"[INFO] Quota limit hit. Waiting {wait_time}s before retry...")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    # Either not a quota error, or we've exhausted retries
+                    print(f"[ERROR] LLM call failed permanently. Returning None for fallback handling.")
+                    return None
 
 
 class Interviewer:
@@ -274,31 +341,73 @@ class Coach:
             self.templates = {}
         self.llm = llm_client or LLMClient()
 
-    def _generate_ideal_answer(self, question_text: str, user_answer: str, evaluation_result: Dict[str, Any]) -> str:
-        """Generate an ideal answer based on user's context or hypothetical scenario."""
+    def _generate_combined_feedback(self, question_text: str, user_answer: str, evaluation_result: Dict[str, Any]) -> Tuple[str, str]:
+        """Generate both personalized coaching and ideal answer in ONE LLM call to save quota."""
         if not self.llm.has_provider:
-            return self._fallback_ideal_answer(question_text, user_answer)
+            print("[INFO] LLM not available - using template feedback")
+            return (self._fallback_personalized_coaching(user_answer, evaluation_result),
+                    self._fallback_ideal_answer(question_text, user_answer))
         
-        prompt = f"""You are an expert interview coach. Based on the user's attempt, generate an IDEAL STAR-format answer for this interview question.
+        clarity = evaluation_result.get("clarity", 0)
+        star = evaluation_result.get("star_structure", evaluation_result.get("structure", 0))
+        relevance = evaluation_result.get("relevance", 0)
+        diagnostics = evaluation_result.get("diagnostics", {})
+        
+        prompt = f"""You are an expert interview coach. Provide TWO outputs:
 
-Question: {question_text}
+1. PERSONALIZED COACHING: Provide feedback in this format:
+   "You answered by [summarize]. However, [main weakness]. Next time when facing [type], try answering like this: [specific guidance]. This is good interview practice because [why]."
 
-User's answer (needs improvement): {user_answer}
+2. IDEAL STAR ANSWER: Generate a perfect STAR-format answer for this question.
 
-Task: Create an ideal answer that:
-1. Uses similar context from user's answer if applicable, or creates a realistic hypothetical scenario
-2. Follows perfect STAR structure (Situation, Task, Action, Result)
-3. Includes specific technical details and quantified results
-4. Is concise (150-250 words)
-5. Demonstrates strong interview skills
+---
+QUESTION: {question_text}
 
-Format: Write ONLY the ideal answer, no meta-commentary."""
+CANDIDATE'S ANSWER: {user_answer}
+
+SCORES: Clarity={clarity}/100, STAR={star}/100, Relevance={relevance}/100
+ISSUES: Clarity: {diagnostics.get('clarity', 'N/A')}. Structure: {diagnostics.get('structure', 'N/A')}. Relevance: {diagnostics.get('relevance', 'N/A')}
+
+---
+RESPOND WITH:
+COACHING:
+[your personalized coaching here]
+
+IDEAL_ANSWER:
+[your ideal STAR answer here]
+"""
         
         try:
-            response = self.llm.call(prompt)
-            return response.strip() if response else self._fallback_ideal_answer(question_text, user_answer)
-        except Exception:
-            return self._fallback_ideal_answer(question_text, user_answer)
+            response = self.llm.call(prompt, max_tokens=2048, temperature=0.7)
+            if not response:
+                print("[INFO] Gemini returned empty response (likely quota exceeded) - using template feedback")
+                return (self._fallback_personalized_coaching(user_answer, evaluation_result),
+                        self._fallback_ideal_answer(question_text, user_answer))
+            
+            # Parse response into two parts
+            coaching = ""
+            ideal = ""
+            try:
+                parts = response.split("IDEAL_ANSWER:")
+                if len(parts) == 2:
+                    coaching_part = parts[0].replace("COACHING:", "").strip()
+                    ideal_part = parts[1].strip()
+                    coaching = coaching_part if coaching_part else self._fallback_personalized_coaching(user_answer, evaluation_result)
+                    ideal = ideal_part if ideal_part else self._fallback_ideal_answer(question_text, user_answer)
+                else:
+                    # Parsing failed, use fallbacks
+                    coaching = self._fallback_personalized_coaching(user_answer, evaluation_result)
+                    ideal = self._fallback_ideal_answer(question_text, user_answer)
+            except Exception as parse_e:
+                print(f"[DEBUG] Failed to parse combined response: {parse_e}")
+                coaching = self._fallback_personalized_coaching(user_answer, evaluation_result)
+                ideal = self._fallback_ideal_answer(question_text, user_answer)
+            
+            return (coaching, ideal)
+        except Exception as e:
+            print(f"[ERROR] Combined feedback generation failed: {e}")
+            return (self._fallback_personalized_coaching(user_answer, evaluation_result),
+                    self._fallback_ideal_answer(question_text, user_answer))
     
     def _fallback_ideal_answer(self, question_text: str, user_answer: str) -> str:
         """Generate a structured ideal answer template when LLM unavailable."""
@@ -357,7 +466,7 @@ Requirements:
 """
         
         try:
-            response = self.llm.call(prompt, max_tokens=512, temperature=0.7)
+            response = self.llm.call(prompt, max_tokens=1024, temperature=0.7)
             if response and len(response) > 50:
                 return response
         except Exception as e:
@@ -423,11 +532,8 @@ Requirements:
         else:
             m_answer = "S: [Situation]\nT: [Task]\nA: [Action — what you did]\nR: [Result — measurable outcome]"
         
-        # Generate personalized coaching
-        personalized_coaching = self._generate_personalized_coaching(question_text, user_answer, evaluation_result)
-        
-        # Generate ideal contextual answer
-        ideal_answer = self._generate_ideal_answer(question_text, user_answer, evaluation_result)
+        # Generate BOTH personalized coaching and ideal answer in ONE LLM call to conserve quota
+        personalized_coaching, ideal_answer = self._generate_combined_feedback(question_text, user_answer, evaluation_result)
 
         return {
             "improvement_bullet": improvement,

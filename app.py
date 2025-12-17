@@ -26,6 +26,10 @@ from typing import Dict, Any, List
 
 import streamlit as st
 
+# Load environment variables from .env file (for GEMINI_API_KEY)
+from dotenv import load_dotenv
+load_dotenv()
+
 # Import agents from your agent_core.py
 from agent_core import Interviewer, Evaluator, Coach
 
@@ -783,7 +787,12 @@ with col2:
         
         # Display personalized coaching if available
         if fb.get("personalized_coaching"):
+            # Check if this is a template fallback (starts with standard phrases)
+            is_template = fb.get("personalized_coaching", "").startswith("Your answer") or fb.get("personalized_coaching", "").startswith("You provided") or fb.get("personalized_coaching", "").startswith("You covered")
+            
             with st.expander("💡 AI-Powered Personalized Coaching", expanded=True):
+                if is_template:
+                    st.info("ℹ️ Using template feedback (Gemini quota may be exhausted). AI-generated feedback resumes when quota resets.")
                 st.markdown(f"""
                 <div class="feedback-card success">
                     {fb.get("personalized_coaching")}
@@ -792,7 +801,12 @@ with col2:
         
         # Display ideal answer example
         if fb.get("ideal_answer"):
+            # Check if this is a template fallback
+            is_template = fb.get("ideal_answer", "").startswith("**Ideal STAR Answer Example:**")
+            
             with st.expander("🎯 Ideal Answer Example (Based on Your Context)", expanded=True):
+                if is_template:
+                    st.info("ℹ️ Showing template answer (Gemini quota exhausted). Personalized examples resume when quota resets.")
                 st.markdown(f"""
                 <div class="feedback-card success">
                     {fb.get("ideal_answer")}

@@ -121,6 +121,35 @@ You can now view your Streamlit app in your browser.
 
 **Solutions:**
 1. Verify `.env` file exists in project root
+2. Check that `GEMINI_API_KEY` is set correctly (no quotes needed)
+3. Restart Streamlit after editing `.env`
+
+### Gemini API Quota Exceeded (429 Error)
+
+**Problem:** Error message: `429 You exceeded your current quota`
+
+**Understanding Quotas:**
+- **FREE tier**: 20 requests per day, 2 requests per minute
+- **Paid tier**: 10M tokens/month FREE, then $0.075 per 1M tokens
+- Quota resets every 24 hours (midnight UTC)
+
+**Immediate Solutions:**
+1. **Wait for quota reset** (next day at midnight)
+2. **Get a new free API key** from [Google AI Studio](https://aistudio.google.com/apikey)
+3. **Upgrade to paid tier** for much higher limits:
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Enable billing
+   - Enjoy 10M tokens/month FREE with paid account
+
+**What happens when quota is exceeded:**
+- App still works with template feedback (not AI-generated)
+- Terminal shows `[INFO] Gemini returned empty response (likely quota exceeded)`
+- User experience: Generic coaching instead of personalized
+
+**Tip:** Each Q&A uses 1-2 API calls, so with free tier you can practice ~10-20 questions per day.
+
+**Solutions:**
+1. Verify `.env` file exists in project root
 2. Check that `GEMINI_API_KEY=` is in the file
 3. Ensure your API key is valid ([Generate new one here](https://makersuite.google.com/app/apikey))
 4. Restart the app after updating `.env`
