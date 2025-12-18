@@ -79,10 +79,15 @@ class LLMClient:
         self.google_key = os.getenv("GOOGLE_API_KEY", "").strip()
         self.openai_key = os.getenv("OPENAI_API_KEY", "").strip()
 
+        print(f"[DEBUG] LLMClient.__init__ - GEMINI_API_KEY present: {bool(self.gemini_key)}, length: {len(self.gemini_key) if self.gemini_key else 0}")
+        print(f"[DEBUG] LLMClient.__init__ - GOOGLE_API_KEY present: {bool(self.google_key)}")
+        print(f"[DEBUG] LLMClient.__init__ - OPENAI_API_KEY present: {bool(self.openai_key)}")
+
         # Whether we have any provider keys at all (may still fail to initialize client).
         self.has_provider = bool(self.gemini_key or self.google_key or self.openai_key)
         self.model = None
         self.llm_provider = None
+        print(f"[DEBUG] LLMClient.__init__ - has_provider: {self.has_provider}")
 
         # Initialize Google Gemini if either GEMINI_API_KEY or GOOGLE_API_KEY is present
         if self.gemini_key or self.google_key:
@@ -384,25 +389,58 @@ IDEAL_ANSWER:
                 return (self._fallback_personalized_coaching(user_answer, evaluation_result),
                         self._fallback_ideal_answer(question_text, user_answer))
             
-            # Parse response into two parts
+            print(f"[DEBUG] Raw Gemini response (first 300 chars): {response[:300]}")
+            
+            # Parse response into two parts - try multiple strategies
             coaching = ""
             ideal = ""
-            try:
+            
+            # Strategy 1: Split by IDEAL_ANSWER:
+            if "IDEAL_ANSWER:" in response:
                 parts = response.split("IDEAL_ANSWER:")
                 if len(parts) == 2:
                     coaching_part = parts[0].replace("COACHING:", "").strip()
                     ideal_part = parts[1].strip()
-                    coaching = coaching_part if coaching_part else self._fallback_personalized_coaching(user_answer, evaluation_result)
-                    ideal = ideal_part if ideal_part else self._fallback_ideal_answer(question_text, user_answer)
-                else:
-                    # Parsing failed, use fallbacks
-                    coaching = self._fallback_personalized_coaching(user_answer, evaluation_result)
-                    ideal = self._fallback_ideal_answer(question_text, user_answer)
-            except Exception as parse_e:
-                print(f"[DEBUG] Failed to parse combined response: {parse_e}")
+                    coaching = coaching_part if coaching_part else ""
+                    ideal = ideal_part if ideal_part else ""
+            
+            # Strategy 2: If first strategy didn't work, try case-insensitive or line-based parsing
+            if not coaching or not ideal:
+                lines = response.split('\n')
+                in_coaching = False
+                in_ideal = False
+                coaching_lines = []
+                ideal_lines = []
+                
+                for line in lines:
+                    if 'coaching:' in line.lower():
+                        in_coaching = True
+                        in_ideal = False
+                        continue
+                    if 'ideal_answer:' in line.lower():
+                        in_ideal = True
+                        in_coaching = False
+                        continue
+                    
+                    if in_coaching and line.strip():
+                        coaching_lines.append(line)
+                    elif in_ideal and line.strip():
+                        ideal_lines.append(line)
+                
+                coaching = '\n'.join(coaching_lines).strip() if coaching_lines else coaching
+                ideal = '\n'.join(ideal_lines).strip() if ideal_lines else ideal
+            
+            # Strategy 3: If still empty, use entire response as coaching
+            if not coaching:
+                coaching = response.strip()
+            
+            # Use fallbacks only if parsing yielded nothing meaningful
+            if len(coaching.strip()) < 20:
                 coaching = self._fallback_personalized_coaching(user_answer, evaluation_result)
+            if len(ideal.strip()) < 20:
                 ideal = self._fallback_ideal_answer(question_text, user_answer)
             
+            print(f"[DEBUG] Parsed coaching length: {len(coaching)}, ideal length: {len(ideal)}")
             return (coaching, ideal)
         except Exception as e:
             print(f"[ERROR] Combined feedback generation failed: {e}")

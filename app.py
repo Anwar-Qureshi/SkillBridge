@@ -29,6 +29,7 @@ import streamlit as st
 # Load environment variables from .env file (for GEMINI_API_KEY)
 from dotenv import load_dotenv
 load_dotenv()
+print(f"[INIT] Environment loaded. GEMINI_API_KEY present: {bool(os.getenv('GEMINI_API_KEY'))}")
 
 # Import agents from your agent_core.py
 from agent_core import Interviewer, Evaluator, Coach
@@ -787,17 +788,37 @@ with col2:
         
         # Display personalized coaching if available
         if fb.get("personalized_coaching"):
-            # Check if this is a template fallback (starts with standard phrases)
-            is_template = fb.get("personalized_coaching", "").startswith("Your answer") or fb.get("personalized_coaching", "").startswith("You provided") or fb.get("personalized_coaching", "").startswith("You covered")
+            coaching_text = fb.get("personalized_coaching", "")
+            # List of template-only phrases (heuristic detection)
+            template_phrases = [
+                "Your answer",
+                "You provided",
+                "You covered",
+                "Rewrite your answer",
+                "Next time when facing"
+            ]
+            is_template = any(coaching_text.startswith(phrase) for phrase in template_phrases)
             
-            with st.expander("💡 AI-Powered Personalized Coaching", expanded=True):
-                if is_template:
-                    st.info("ℹ️ Using template feedback (Gemini quota may be exhausted). AI-generated feedback resumes when quota resets.")
-                st.markdown(f"""
-                <div class="feedback-card success">
-                    {fb.get("personalized_coaching")}
-                </div>
-                """, unsafe_allow_html=True)
+            st.markdown("**💡 AI-Powered Personalized Coaching**")
+            if is_template:
+                st.warning("⚠️ Template feedback shown (Gemini response may not have parsed correctly). Check logs for details.")
+            else:
+                st.success("✅ AI-Generated feedback from Gemini")
+            
+            st.markdown(f"""
+            <div class="feedback-card success">
+                {coaching_text}
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Display ideal answer
+        if fb.get("ideal_answer"):
+            st.markdown("**📚 Ideal STAR Answer (AI-Generated)**")
+            st.markdown(f"""
+            <div class="feedback-card">
+                {fb.get("ideal_answer")}
+            </div>
+            """, unsafe_allow_html=True)
         
         # Display ideal answer example
         if fb.get("ideal_answer"):
